@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DataController
   allRoundData:
   - name: 'Round Zero '
-    timeLimitInSeconds: 30
+    timeLimitInSeconds: 60
     pointsAddedForCorrectAnswer: 10
     questions:
     - questionText: "O que significa a sigla \u201CCPU\u201D?"
@@ -204,6 +204,206 @@ MonoBehaviour:
       - answerText: while
         isCorrect: 1
       - answerText: switch
+        isCorrect: 0
+    - questionText: "O que \xE9 um sistema operacional?"
+      answers:
+      - answerText: Um software que gerencia o hardware e os programas do computador
+        isCorrect: 1
+      - answerText: "Um tipo de antiv\xEDrus"
+        isCorrect: 0
+      - answerText: Um programa para editar imagens
+        isCorrect: 0
+      - answerText: Um tipo de navegador
+        isCorrect: 0
+    - questionText: "Qual destes \xE9 um exemplo de sistema operacional?"
+      answers:
+      - answerText: Google Chrome
+        isCorrect: 0
+      - answerText: Photoshop
+        isCorrect: 0
+      - answerText: Excel
+        isCorrect: 0
+      - answerText: Windows
+        isCorrect: 1
+    - questionText: "O que significa \u201Cinternet\u201D?"
+      answers:
+      - answerText: Uma rede global de computadores conectados
+        isCorrect: 1
+      - answerText: Um tipo de computador
+        isCorrect: 0
+      - answerText: Um sistema de arquivos
+        isCorrect: 0
+      - answerText: "Um programa de edi\xE7\xE3o de texto"
+        isCorrect: 0
+    - questionText: "Qual \xE9 a fun\xE7\xE3o de um navegador (browser)?"
+      answers:
+      - answerText: "Proteger o computador de v\xEDrus"
+        isCorrect: 0
+      - answerText: Criar planilhas
+        isCorrect: 0
+      - answerText: "Acessar p\xE1ginas da internet"
+        isCorrect: 1
+      - answerText: Programar aplicativos
+        isCorrect: 0
+    - questionText: "O que \xE9 um v\xEDrus de computador?"
+      answers:
+      - answerText: "Um hardware de prote\xE7\xE3o"
+        isCorrect: 0
+      - answerText: Um tipo de sistema operacional
+        isCorrect: 0
+      - answerText: Um programa malicioso que pode danificar o sistema
+        isCorrect: 1
+      - answerText: Um navegador seguro
+        isCorrect: 0
+    - questionText: "O que significa \u201Chardware\u201D?"
+      answers:
+      - answerText: Programas do computador
+        isCorrect: 0
+      - answerText: "Conex\xE3o com a internet"
+        isCorrect: 0
+      - answerText: Sistema de arquivos
+        isCorrect: 0
+      - answerText: "Parte f\xEDsica do computador"
+        isCorrect: 1
+    - questionText: "Qual destes \xE9 um exemplo de hardware?"
+      answers:
+      - answerText: Word
+        isCorrect: 0
+      - answerText: Google Chrome
+        isCorrect: 0
+      - answerText: Teclado
+        isCorrect: 1
+      - answerText: WhatsApp
+        isCorrect: 0
+    - questionText: "O que \xE9 software?"
+      answers:
+      - answerText: Programas e aplicativos
+        isCorrect: 1
+      - answerText: "Parte f\xEDsica do computador"
+        isCorrect: 0
+      - answerText: Cabo de internet
+        isCorrect: 0
+      - answerText: Monitor
+        isCorrect: 0
+    - questionText: "Qual a principal fun\xE7\xE3o da mem\xF3ria RAM?"
+      answers:
+      - answerText: Armazenar arquivos permanentemente
+        isCorrect: 0
+      - answerText: "Processar gr\xE1ficos"
+        isCorrect: 0
+      - answerText: "Guardar dados tempor\xE1rios em uso"
+        isCorrect: 1
+      - answerText: Acessar sites
+        isCorrect: 0
+    - questionText: "O que \xE9 um arquivo \u201CPDF\u201D?"
+      answers:
+      - answerText: "Um tipo de v\xEDrus"
+        isCorrect: 0
+      - answerText: Um sistema operacional
+        isCorrect: 0
+      - answerText: Um navegador
+        isCorrect: 0
+      - answerText: Um formato de documento
+        isCorrect: 1
+    - questionText: O que faz um processador (CPU)?
+      answers:
+      - answerText: Imprime documentos
+        isCorrect: 0
+      - answerText: "Executa c\xE1lculos e instru\xE7\xF5es do computador"
+        isCorrect: 1
+      - answerText: Armazena fotos
+        isCorrect: 0
+      - answerText: "Conecta \xE0 internet"
+        isCorrect: 0
+    - questionText: "O que \xE9 a nuvem (cloud computing)?"
+      answers:
+      - answerText: "Armazenamento e servi\xE7os via internet"
+        isCorrect: 1
+      - answerText: "Um tipo de antiv\xEDrus"
+        isCorrect: 0
+      - answerText: "Um hardware f\xEDsico"
+        isCorrect: 0
+      - answerText: Um sistema operacional
+        isCorrect: 0
+    - questionText: "Qual \xE9 uma rede social?"
+      answers:
+      - answerText: Linux
+        isCorrect: 0
+      - answerText: Google
+        isCorrect: 0
+      - answerText: Instagram
+        isCorrect: 1
+      - answerText: Windows
+        isCorrect: 0
+    - questionText: "O que \xE9 um algoritmo?"
+      answers:
+      - answerText: Um tipo de computador
+        isCorrect: 0
+      - answerText: Um navegador
+        isCorrect: 0
+      - answerText: "Um v\xEDrus"
+        isCorrect: 0
+      - answerText: "Uma sequ\xEAncia de passos para resolver um problema"
+        isCorrect: 1
+    - questionText: "Qual dessas op\xE7\xF5es \xE9 uma linguagem de programa\xE7\xE3o?"
+      answers:
+      - answerText: HTML
+        isCorrect: 0
+      - answerText: Python
+        isCorrect: 1
+      - answerText: Windows
+        isCorrect: 0
+      - answerText: Excel
+        isCorrect: 0
+    - questionText: "O que \xE9 backup?"
+      answers:
+      - answerText: "Uma c\xF3pia de seguran\xE7a dos dados"
+        isCorrect: 1
+      - answerText: "Um tipo de v\xEDrus"
+        isCorrect: 0
+      - answerText: "Um navegador mais r\xE1pido"
+        isCorrect: 0
+      - answerText: Um sistema operacional
+        isCorrect: 0
+    - questionText: "Qual a fun\xE7\xE3o do antiv\xEDrus?"
+      answers:
+      - answerText: Criar arquivos
+        isCorrect: 0
+      - answerText: Aumentar a velocidade da internet
+        isCorrect: 0
+      - answerText: "Detectar e remover amea\xE7as do computador"
+        isCorrect: 1
+      - answerText: "Editar v\xEDdeos"
+        isCorrect: 0
+    - questionText: "O que \xE9 um banco de dados?"
+      answers:
+      - answerText: Um tipo de computador
+        isCorrect: 0
+      - answerText: "Um antiv\xEDrus"
+        isCorrect: 0
+      - answerText: Um sistema operacional
+        isCorrect: 0
+      - answerText: "Um sistema para armazenar e organizar informa\xE7\xF5es"
+        isCorrect: 1
+    - questionText: "O que significa \u201Clogin\u201D?"
+      answers:
+      - answerText: Desligar o computador
+        isCorrect: 0
+      - answerText: "Entrar em um sistema com usu\xE1rio e senha"
+        isCorrect: 1
+      - answerText: Instalar um programa
+        isCorrect: 0
+      - answerText: Apagar arquivos
+        isCorrect: 0
+    - questionText: "O que \xE9 um aplicativo (app)?"
+      answers:
+      - answerText: "Um programa com fun\xE7\xE3o espec\xEDfica para o usu\xE1rio"
+        isCorrect: 1
+      - answerText: Um tipo de hardware
+        isCorrect: 0
+      - answerText: Um cabo de rede
+        isCorrect: 0
+      - answerText: Um sistema de arquivos
         isCorrect: 0
 --- !u!4 &1988553062
 Transform:

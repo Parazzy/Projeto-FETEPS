@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using TMPro;
+using System.Linq; //Alteracao para aleatorizacao
 
 public class GameController : MonoBehaviour
 {
@@ -30,9 +31,20 @@ public class GameController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        dataController = FindFirstObjectByType<DataController>(); //dataController = FindObjectOfType<DataController>();
+        dataController = FindFirstObjectByType<DataController>();
         currentRoundData = dataController.GetCurrentRoundData();
-        questionPool = currentRoundData.questions;
+
+        // --- LÓGICA DE ALEATORIEDADE ---
+
+        //Criamos uma lista temporária baseada nas perguntas originais
+        List<QuestionData> randomQuestions = new List<QuestionData>(currentRoundData.questions);
+
+        //Embaralhamos essa lista usando Fisher-Yates
+        Shuffle(randomQuestions);
+
+        //Pegamos apenas as 10 primeiras perguntas embaralhadas e salvamos no questionPool
+        questionPool = randomQuestions.Take(10).ToArray();
+
         timeRemaining = currentRoundData.timeLimitInSeconds;
         UpdateTimeRemainingDisplay();
 
@@ -41,7 +53,6 @@ public class GameController : MonoBehaviour
 
         ShowQuestion();
         isRoundActive = true;
-
     }
 
     private void ShowQuestion()
@@ -50,14 +61,17 @@ public class GameController : MonoBehaviour
         QuestionData questionData = questionPool[questionIndex];
         questionDisplayText.text = questionData.questionText;
 
-        for (int i = 0; i < questionData.answers.Length; i++)
+        List<AnswerData> answers = new List<AnswerData>(questionData.answers);
+        Shuffle(answers);
+
+        for(int i = 0; i < answers.Count; i++)
         {
             GameObject answerButtonGameObject = answerButtonObjectPool.GetObject();
             answerButtonGameObjects.Add(answerButtonGameObject);
             answerButtonGameObject.transform.SetParent(answerButtonParent);
 
             AnswerButton answerButton = answerButtonGameObject.GetComponent<AnswerButton>();
-            answerButton.Setup(questionData.answers[i]);
+            answerButton.Setup(answers[i]);
         }
     }
 
@@ -121,6 +135,17 @@ public class GameController : MonoBehaviour
                 EndRound();
             }
 
+        }
+    }
+
+    private void Shuffle<T>(List<T> list)
+    {
+        for (int i = list.Count - 1; i > 0; i--)
+        {
+            int randomIndex = Random.Range(0, i + 1);
+            T temp = list[i];
+            list[i] = list[randomIndex];
+            list[randomIndex] = temp;
         }
     }
 }

@@ -1,5 +1,6 @@
+using System.Collections.Generic;
+using System.Linq; //alteracao para sorteio de perguntas
 using UnityEngine;
-using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class DataController : MonoBehaviour
